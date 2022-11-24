@@ -36,6 +36,9 @@ Route::get('categories/{category}', [CategoryController::class, 'show'])
 Route::post('categories/store', [CategoryController::class, 'store'])
     ->name('category.store');
 
+Route::delete('categories/{category}/delete', [CategoryController::class, 'destroy'])
+    ->name('category.destroy');
+
 
 Route::post('categories/{category}/products', [ProductController::class, 'store'])
     ->name('product.store')
@@ -47,4 +50,5 @@ Route::post('categories/{category}/{product}/{dropDownCategory}/check', [Product
     ->where('category', '[0-9]+')
     ->where('product', '[0-9]+')
     ->where('dropDownProduct', '[0-9]+');
+
 

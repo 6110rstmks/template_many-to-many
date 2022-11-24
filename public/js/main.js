@@ -13,9 +13,6 @@
             const productId = checkbox.dataset.product
             const dropDownCategoryId = checkbox.dataset.dropdown
 
-            console.log(categoryId)
-            console.log(productId)
-            console.log(dropDownCategoryId)
             fetch('/categories/' + categoryId + '/' + productId + '/' + dropDownCategoryId + '/check', {
                 method: 'post',
                 headers: {
@@ -29,7 +26,7 @@
 
 
 
-
+    // drop down btn
     let dropBtns = document.querySelectorAll('#dropdownDefault')
 
 
@@ -37,6 +34,15 @@
         dropBtn.addEventListener('click', (e) => {
             e.stopPropagation()
             e.target.nextElementSibling.classList.toggle('hidden')
+        })
+    })
+
+    // dlt btn (home page)
+    const dltBtns = document.querySelectorAll('.dlt-btn')
+    dltBtns.forEach(dltBtn => {
+        dltBtn.addEventListener('click', (e) => {
+            console.log(e)
+            e.target.parentNode.submit()
         })
     })
 

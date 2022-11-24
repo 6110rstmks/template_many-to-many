@@ -40,4 +40,12 @@ class CategoryController extends Controller
         return redirect()
             ->route('home');
     }
+
+    public function destroy(Category $category)
+    {
+        $category->delete();
+
+        return redirect()
+            ->route('home');
+    }
 }
