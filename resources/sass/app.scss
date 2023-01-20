@@ -1,0 +1,26 @@
+h1 {
+    color: purple;
+}
+
+li {
+    list-style-type: none;
+}
+
+.post-single {
+    margin-top: 44px;
+
+    .add-category {
+        background-color: gray;
+        cursor: pointer;
+    }
+
+    .dropdown_list {
+        display: none;
+    }
+
+    .visible {
+        display: block;
+        color: green;
+    }
+}
+
